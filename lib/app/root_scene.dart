@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_experiment/app/app_bar.dart';
 import 'package:flutter_experiment/home/home_scene.dart';
 import 'package:flutter_experiment/search/search_scene.dart';
 
@@ -15,9 +16,7 @@ class _RootSceneState extends State<RootScene> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text("Tracktr"),
-      ),
+      appBar: const AppBarWidget(),
       body: IndexedStack(
         index: _tabIndex,
         children: const [
