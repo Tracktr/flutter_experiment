@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_experiment/home/home_scene.dart';
+import 'package:flutter_experiment/search/search_scene.dart';
 
 class RootScene extends StatefulWidget {
   const RootScene({super.key});
@@ -16,8 +18,12 @@ class _RootSceneState extends State<RootScene> {
       appBar: AppBar(
         title: const Text("Tracktr"),
       ),
-      body: Center(
-        child: Text("Tab index: $_tabIndex"),
+      body: IndexedStack(
+        index: _tabIndex,
+        children: const [
+          HomeScene(),
+          SearchScene(),
+        ],
       ),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _tabIndex,
