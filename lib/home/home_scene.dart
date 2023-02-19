@@ -5,6 +5,6 @@ class HomeScene extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Text("Home Scene...");
+    return const SafeArea(child: Text("Hello World..."));
   }
 }
