@@ -6,9 +6,19 @@ class AppScene extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       title: "Tracktr",
-      home: RootScene(),
+      home: const RootScene(),
+
+      theme: ThemeData(
+        colorScheme: const ColorScheme.dark(
+          primary: Color(0xffF9C32D),
+          secondary: Color(0xffF9C32D),
+        ),
+      ),
+
+      // Disable the debug banner
+      debugShowCheckedModeBanner: false,
     );
   }
 }

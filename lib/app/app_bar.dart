@@ -8,9 +8,7 @@ class AppBarWidget extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       title: const Text('Hello'),
       elevation: 0,
-      titleTextStyle: const TextStyle(
-        color: Colors.black,
-      ),
+      backgroundColor: Colors.black12,
     );
   }
 

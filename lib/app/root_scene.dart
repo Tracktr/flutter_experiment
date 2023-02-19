@@ -16,7 +16,6 @@ class _RootSceneState extends State<RootScene> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const AppBarWidget(),
       body: IndexedStack(
         index: _tabIndex,
         children: const [
@@ -25,6 +24,7 @@ class _RootSceneState extends State<RootScene> {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        elevation: 0,
         currentIndex: _tabIndex,
         onTap: (int index) {
           setState(() {
